@@ -23,9 +23,8 @@ function App() {
   const [categories, setCategories] = useState(allCategories);
 
   const filterItems = (category) => {
-    items.filter((item) => {
-      return productItems.category === category
-    })
+      let result =category!=="all" ? items.filter(item => item.category === category) : items;
+        setProductItems(result);
   }
 
   return (
