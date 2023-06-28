@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import Todo from "./Todo";
 function MyToDos() {
 
   const [MyToDos, setMyToDos] = useState([]);
@@ -37,7 +38,7 @@ function MyToDos() {
           MyToDos && MyToDos.map(todo => {
             <li key={todo.id}>
               todo Id : {todo.id}
-              <todo id={todo.id}/>
+              <Todo id={todo.id}/>
             </li>
           })
         }
